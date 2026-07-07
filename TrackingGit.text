@@ -1,0 +1,46 @@
+Git Status, Add, Commit & History Assignment
+1. Correct usage of git status, git add, and git commit
+I used the following Git commands in order:
+
+git status
+git add README.md
+git commit -m "Initial project setup"
+
+- git status checks the current state of the repository.
+- git add stages changes for commit.
+- git commit saves the staged changes permanently in the Git history.
+2. Commit messages are meaningful
+Examples of meaningful commit messages:
+- Initial project setup
+- Added README file
+- Updated project documentation
+- Fixed login validation bug
+
+Meaningful commit messages clearly describe the purpose of the change.
+3. Multiple commits created
+Example workflow:
+
+git commit -m "Initial project setup"
+git commit -m "Added user login feature"
+git commit -m "Updated README documentation"
+
+Creating multiple commits helps track project progress and makes it easier to revert specific changes if needed.
+4. Commit history viewed correctly
+To view commit history, I used:
+
+git log
+
+For a short summary:
+
+git log --oneline
+
+This displays all commits along with their unique commit IDs and messages.
+5. Beginner mistakes identified and explained
+Common beginner mistakes:
+• Forgetting to run 'git add' before 'git commit'.
+• Writing unclear commit messages such as 'update' or 'changes'.
+• Committing unrelated changes together.
+• Forgetting to check changes using 'git status'.
+• Accidentally modifying files without reviewing them before committing.
+
+Avoiding these mistakes helps maintain a clean and understandable Git history.
