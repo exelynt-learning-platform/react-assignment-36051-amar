@@ -1,0 +1,26 @@
+GitHub Remote Repository Assignment - Amar Jadhav
+1. GitHub account created
+I created a GitHub account and signed in successfully. GitHub is a cloud-based platform used to host Git repositories and collaborate with other developers.
+2. Remote repository created
+I created a new repository on GitHub by clicking 'New Repository', entering the repository name, selecting the desired visibility (Public/Private), and creating the repository.
+3. Local repository connected to GitHub correctly
+I connected my local Git repository to GitHub using the following commands:
+
+git remote add origin https://github.com/<username>/<repository>.git
+git branch -M main
+git push -u origin main
+
+These commands linked my local repository with the remote GitHub repository and pushed the project successfully.
+4. Commands executed without errors
+Commands used:
+
+git remote add origin https://github.com/<username>/<repository>.git
+git remote -v
+git branch -M main
+git push -u origin main
+
+All commands executed successfully without errors.
+5. Explanations clear and accurate
+GitHub is used to store repositories online, making it easy to back up code, collaborate with team members, track changes, and manage projects. Connecting a local Git repository to GitHub allows code to be pushed, pulled, and shared efficiently.
+
+Note: Replace <username> and <repository> with your actual GitHub username and repository name before submission.
