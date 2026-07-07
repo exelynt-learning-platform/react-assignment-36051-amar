@@ -1,0 +1,53 @@
+Git Branching and Merging Assignment - Amar Jadhav
+1. Branches created and switched correctly
+I created a new branch and switched to it using the following commands:
+
+git branch feature-login
+git checkout feature-login
+
+Alternatively:
+
+git checkout -b feature-login
+
+These commands create and switch to a new branch for developing a feature separately from the main branch.
+2. Changes made in separate branch
+After switching to the 'feature-login' branch, I modified project files and committed the changes.
+
+Example:
+git add .
+git commit -m "Added login feature"
+
+The changes remained isolated in the feature branch until they were merged.
+3. Branch merged successfully
+After completing the feature, I switched back to the main branch and merged the feature branch.
+
+Commands:
+git checkout main
+git merge feature-login
+
+This merged the changes from the feature branch into the main branch.
+4. Merge conflict understanding demonstrated
+A merge conflict occurs when the same part of a file is modified differently in two branches. Git cannot decide which version to keep automatically.
+
+To resolve a conflict:
+• Open the conflicted file.
+• Choose or combine the required changes.
+• Save the file.
+• Run:
+  git add <file>
+  git commit
+
+After resolving the conflict, the merge is completed successfully.
+5. Commands executed correctly
+Commands used:
+
+git branch
+git checkout -b feature-login
+git status
+git add .
+git commit -m "Added login feature"
+git checkout main
+git merge feature-login
+git log --oneline
+
+These commands demonstrate creating branches, making changes, merging, and viewing commit history.
