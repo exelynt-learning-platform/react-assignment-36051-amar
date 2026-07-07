@@ -1,0 +1,55 @@
+
+1. README.md created with proper documentation
+I created a README.md file containing:
+- Project title
+- Project description
+- Features
+- Installation steps
+- Usage instructions
+- Technologies used
+- Author information
+
+The README helps users understand the project quickly.
+2. .gitignore used correctly
+I created a .gitignore file to exclude unnecessary files such as:
+- node_modules/
+- .env
+- *.log
+- dist/
+- build/
+
+This prevents temporary and sensitive files from being committed.
+3. GitHub workflow followed properly
+Workflow followed:
+1. Clone the repository.
+2. Create a feature branch.
+3. Make changes.
+4. Commit with meaningful messages.
+5. Push the branch to GitHub.
+6. Create a Pull Request.
+7. Review and merge changes.
+4. Understanding of Issues & Pull Requests demonstrated
+Issues are used to report bugs, request features, or track tasks.
+Pull Requests are used to propose code changes for review before merging into the main branch.
+5. Git best practices explained
+Best practices:
+- Write meaningful commit messages.
+- Commit small, focused changes.
+- Use feature branches.
+- Pull the latest changes before pushing.
+- Keep the README updated.
+- Never commit passwords or API keys.
+6. Repository structure organized
+Example structure:
+
+Project/
+├── src/
+├── public/
+├── README.md
+├── .gitignore
+├── package.json
+└── assets/
+
+A well-organized repository makes the project easier to understand and maintain.
+7. Explanations clear and relevant
+This assignment demonstrates how to document a project, ignore unnecessary files, collaborate using GitHub, manage Issues and Pull Requests, follow Git best practices, and maintain an organized repository structure.
