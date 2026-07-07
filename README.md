@@ -1,2 +1,35 @@
 # react-assignment-36051-amar
 Module &amp; Week Assignments - This repository contains module-wise and week-wise assignment submissions.
+
+Git & GitHub Assignment Answers
+1. Clearly explains what version control is
+Version control is a system that helps developers track and manage changes to source code over time. It stores different versions of files, allowing developers to review history, restore previous versions, and collaborate without overwriting each other's work.
+
+2. Describes why developers use Git
+Git is a distributed version control system used to manage source code efficiently. Developers use Git to track changes, collaborate with team members, create branches for new features, merge code safely, and maintain a complete history of the project.
+
+3. Identifies common problems Git solves
+Git solves several common development problems:
+• Prevents code from being overwritten by multiple developers.
+• Keeps a complete history of code changes.
+• Makes it easy to revert to previous versions.
+• Supports collaboration through branching and merging.
+• Helps resolve conflicts when multiple developers edit the same files.
+
+4. Explains the difference between Git and GitHub
+Git is a version control tool installed on a computer that tracks code changes locally. GitHub is a cloud-based platform that hosts Git repositories online, making it easier to collaborate, review code, and manage projects with a team.
+
+5. Compares centralized and distributed version control correctly
+Centralized Version Control (CVCS):
+• Uses one central server to store all code.
+• Developers must connect to the server to commit changes.
+• If the server fails, collaboration may stop.
+• Example: SVN.
+
+Distributed Version Control (DVCS):
+• Every developer has a complete copy of the repository.
+• Developers can commit changes offline.
+• Faster, more reliable, and easier to collaborate.
+• Example: Git.
+
+Git is a Distributed Version Control System (DVCS).
