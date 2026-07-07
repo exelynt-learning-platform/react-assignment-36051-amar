@@ -1,0 +1,51 @@
+Git Push, Pull & Clone Assignment - Amar Jadhav
+1. Correct use of git push, git pull, git clone
+I used the following Git commands:
+
+git push origin main
+git pull origin main
+git clone https://github.com/<username>/<repository>.git
+
+- git push uploads local commits to GitHub.
+- git pull downloads and merges the latest changes from GitHub.
+- git clone creates a copy of a remote repository on the local machine.
+2. Local and remote repositories in sync
+After committing changes locally, I used:
+
+git push origin main
+
+To get the latest changes from GitHub, I used:
+
+git pull origin main
+
+This kept my local and remote repositories synchronized.
+3. origin and main explained
+- origin: The default name of the remote GitHub repository.
+- main: The default primary branch of the repository.
+
+Example:
+git push origin main
+This pushes the local 'main' branch to the remote repository named 'origin'.
+4. Collaboration workflow explained clearly
+Typical collaboration workflow:
+1. Clone the repository.
+2. Create a new branch.
+3. Make changes and commit them.
+4. Push the branch to GitHub.
+5. Create a Pull Request.
+6. Review and merge the changes.
+7. Pull the latest changes to keep the local repository updated.
+5. Commands executed correctly
+Commands used:
+
+git clone https://github.com/<username>/<repository>.git
+git status
+git add .
+git commit -m "Updated project"
+git push origin main
+git pull origin main
+git log --oneline
+
+These commands demonstrate cloning, committing, pushing, pulling, and viewing commit history.
+
+Note: Replace <username> and <repository> with your actual GitHub username and repository name before submission.
