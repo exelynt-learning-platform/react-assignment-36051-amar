@@ -1,0 +1,27 @@
+Git Repository Initialization Assignment
+1. Repository initialized correctly
+I created a new project folder and initialized a Git repository using the command:
+
+git init
+
+This created a new Git repository in my project directory.
+2. .git folder identified and explained
+The .git folder is created automatically after running 'git init'. It is a hidden folder that stores all repository information, including commits, branches, configuration, and version history. It is the core of every Git repository.
+3. File states understood and explained
+Git tracks files through different states:
+• Untracked – Git is not tracking the file.
+• Staged – The file has been added using 'git add' and is ready to commit.
+• Committed – The file has been saved permanently in the repository history.
+4. Steps followed correctly
+Commands used:
+
+mkdir GitDemo
+cd GitDemo
+git init
+echo "Hello Git" > README.md
+git status
+git add README.md
+git status
+git commit -m "Initial commit"
+5. Explanations are clear and original
+I successfully initialized a Git repository, understood the purpose of the .git folder, learned the different file states in Git, and followed the correct sequence of commands to create and commit a file. This exercise helped me understand the basic Git workflow.
