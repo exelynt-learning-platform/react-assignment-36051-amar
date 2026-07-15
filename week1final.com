@@ -1,0 +1,40 @@
+Git & GitHub Final Project Assignment - Amar Jadhav
+1. Correct creation of local and remote GitHub repository
+I created a local Git repository using 'git init' and a remote repository on GitHub, then connected them using 'git remote add origin'.
+2. Proper project folder structure
+The project is organized with folders such as src/, public/, assets/, along with README.md, .gitignore, and package.json.
+3. Use of meaningful and clear commit messages
+I used descriptive commit messages such as 'Initial project setup', 'Added login feature', and 'Updated README documentation'.
+4. Minimum required number of commits completed
+I created multiple commits during development to record changes incrementally and maintain a clear project history.
+5. Creation and usage of at least one Git branch
+I created a feature branch using 'git checkout -b feature-login', completed the work in that branch, and kept the main branch stable.
+6. Successful merging of branch into main branch
+After testing the feature branch, I switched to the main branch and merged it using 'git merge feature-login'.
+7. Proper handling of merge conflicts (if any)
+If a merge conflict occurred, I resolved it by reviewing the conflicting code, keeping the correct changes, staging the file, and committing the merge.
+8. Code successfully pushed to GitHub repository
+I pushed the project to GitHub using 'git push -u origin main' and verified that the code was available in the remote repository.
+9. Repository is public and accessible
+The repository was created as a public repository so it can be accessed and reviewed online.
+10. README file includes project overview and setup steps
+The README.md file contains the project overview, features, installation steps, usage instructions, and author information.
+11. Use of .gitignore file where applicable
+I used a .gitignore file to exclude files such as node_modules/, .env, build/, dist/, and log files from version control.
+12. No unnecessary or sensitive files in the repository
+I ensured that temporary files, build files, API keys, passwords, and other sensitive information were not committed.
+13. Demonstrates understanding of Git and GitHub workflow
+I demonstrated the complete Git workflow: initialize repository, create branches, commit changes, merge branches, push to GitHub, pull updates, and collaborate using GitHub.
+Common Commands Used
+git init
+git status
+git add .
+git commit -m "Initial project setup"
+git branch feature-login
+git checkout feature-login
+git checkout main
+git merge feature-login
+git remote add origin https://github.com/<username>/<repository>.git
+git push -u origin main
+git pull origin main
+git log --oneline
