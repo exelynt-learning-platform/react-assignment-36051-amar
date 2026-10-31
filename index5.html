@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display and Positioning</title>
+
+    <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+
+    <!-- Fixed Header -->
+    <header class="site-header">
+        <div class="logo">
+            LearnHub
+        </div>
+
+        <nav class="navigation">
+            <a href="#home">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <!-- Sticky Announcement -->
+    <div class="announcement">
+        New courses are available. Start learning today!
+    </div>
+
+    <main>
+
+        <!-- Home Section -->
+        <section id="home" class="hero-section">
+            <h1>Welcome to LearnHub</h1>
+
+            <p>
+                Improve your skills with practical courses
+                and expert guidance.
+            </p>
+
+            <span class="inline-example">
+                Learn
+            </span>
+
+            <span class="block-example">
+                Practice
+            </span>
+
+            <span class="inline-block-example">
+                Build Projects
+            </span>
+
+            <!-- Absolute positioned badge inside relative parent -->
+            <div class="hero-badge">
+                Popular
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="content-section">
+            <h2>Popular Courses</h2>
+
+            <div class="course-container">
+
+                <article class="course-card">
+                    <h3>HTML & CSS</h3>
+                    <p>
+                        Learn website structure, styling,
+                        layouts, and responsive design.
+                    </p>
+                    <a href="#about">Explore Course</a>
+                </article>
+
+                <article class="course-card">
+                    <h3>JavaScript</h3>
+                    <p>
+                        Learn programming fundamentals,
+                        DOM manipulation, and events.
+                    </p>
+                    <a href="#about">Explore Course</a>
+                </article>
+
+                <article class="course-card">
+                    <h3>React Development</h3>
+                    <p>
+                        Build modern user interfaces
+                        using reusable React components.
+                    </p>
+                    <a href="#about">Explore Course</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Overflow Section -->
+        <section class="content-section">
+            <h2>Overflow Demonstration</h2>
+
+            <p>
+                The following box has a fixed height.
+                Its content is managed using overflow: auto.
+            </p>
+
+            <div class="overflow-box">
+                <p>
+                    HTML provides the structure of a webpage.
+                    CSS controls its visual appearance and layout.
+                </p>
+
+                <p>
+                    JavaScript adds interactivity and dynamic
+                    behavior to web applications.
+                </p>
+
+                <p>
+                    React helps developers build reusable
+                    components and maintain complex interfaces.
+                </p>
+
+                <p>
+                    Responsive design ensures that websites
+                    work properly on desktops, tablets, and phones.
+                </p>
+
+                <p>
+                    Consistent spacing and readable typography
+                    improve the user experience.
+                </p>
+            </div>
+
+            <h3>Overflow Hidden Example</h3>
+
+            <div class="hidden-overflow-box">
+                This is a long content example demonstrating
+                how overflow: hidden clips content that extends
+                beyond the container's boundaries.
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content-section about-section">
+            <h2>About LearnHub</h2>
+
+            <p>
+                LearnHub is a learning platform designed to help
+                students develop practical technical skills.
+            </p>
+
+            <p class="static-example">
+                This paragraph uses static positioning.
+            </p>
+
+            <p class="relative-example">
+                This paragraph uses relative positioning.
+            </p>
+        </section>
+
+        <!-- Display None Example -->
+        <section class="content-section">
+            <h2>Display None Demonstration</h2>
+
+            <p>
+                The message below is hidden using display: none.
+            </p>
+
+            <p class="hidden-message">
+                You cannot see this message because display is none.
+            </p>
+
+            <p class="visible-message">
+                This message is visible on the webpage.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Fixed Button -->
+    <a href="#home" class="back-to-top">
+        ↑ Top
+    </a>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 LearnHub. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
