@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Introduction to CSS</title>
+
+    <!-- External CSS file linked to this HTML page -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS starts here -->
+    <style>
+        /* Internal styling for the complete page */
+        body {
+            background-color: #f0f4f8;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Internal styling for the main heading */
+        h1 {
+            color: #102a43;
+            text-align: center;
+        }
+
+        /* Internal styling for introductory paragraph */
+        .intro-text {
+            color: #526579;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+    <!-- Internal CSS ends here -->
+
+</head>
+
+<body>
+
+    <!-- Header section -->
+    <header>
+        <h1>Welcome to My Profile</h1>
+
+        <p class="intro-text">
+            Learning HTML and CSS to build beautiful websites.
+        </p>
+    </header>
+
+    <!-- Main content -->
+    <main>
+
+        <section>
+            <h2>About Me</h2>
+
+            <p id="about-text">
+                Hello! I am a web development learner interested
+                in creating modern and user-friendly websites.
+                I enjoy learning new technologies and improving
+                my programming skills.
+            </p>
+        </section>
+
+        <section>
+            <h2>My Skills</h2>
+
+            <ul class="skills-list">
+                <li>HTML – Web page structure</li>
+                <li>CSS – Web page styling</li>
+                <li>JavaScript – Web page interactivity</li>
+                <li>React – User interface development</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>My Learning Goal</h2>
+
+            <!-- Inline CSS applied directly to this paragraph -->
+            <p style="color: #d35400; font-size: 18px; font-weight: bold;">
+                My goal is to become a professional frontend developer.
+            </p>
+        </section>
+
+        <section class="highlight-section">
+            <h2>Why Am I Learning CSS?</h2>
+
+            <p>
+                CSS helps us control the appearance of HTML elements.
+                It allows us to apply colors, fonts, spacing,
+                backgrounds and layouts to web pages.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2026 My Profile Page. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
