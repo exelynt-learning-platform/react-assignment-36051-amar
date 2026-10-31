@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact LearnTech Academy with your questions and course enquiries.">
+    <title>Contact | LearnTech Academy</title>
+</head>
+
+<body>
+
+    <!-- Website header -->
+    <header>
+        <h1>LearnTech Academy</h1>
+
+        <!-- Main navigation -->
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Contact introduction -->
+        <section>
+            <h2>Contact Us</h2>
+
+            <p>
+                Have questions about our courses?
+                Complete the form below to share your enquiry.
+                We welcome your questions and feedback.
+            </p>
+        </section>
+
+        <!-- Contact form -->
+        <section>
+            <h2>Send an Enquiry</h2>
+
+            <!-- Demonstration only: a backend is required to process this form. -->
+            <form action="#" method="post">
+
+                <p>
+                    <label for="full-name">Full Name:</label>
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="email">Email Address:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        autocomplete="email"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="phone">Phone Number:</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        autocomplete="tel"
+                    >
+                </p>
+
+                <p>
+                    <label for="course">Interested Course:</label>
+
+                    <select id="course" name="course" required>
+                        <option value="">Select a course</option>
+                        <option value="html">HTML Fundamentals</option>
+                        <option value="css">CSS Essentials</option>
+                        <option value="javascript">JavaScript Fundamentals</option>
+                        <option value="react">React Fundamentals</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="message">Your Message:</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        cols="30"
+                        placeholder="Write your message here"
+                        required
+                    ></textarea>
+                </p>
+
+                <button type="submit">Submit Enquiry</button>
+                <button type="reset">Clear Form</button>
+
+            </form>
+        </section>
+
+        <!-- Contact information -->
+        <section>
+            <h2>Contact Information</h2>
+
+            <p>
+                Email:
+                <a href="mailto:hello@example.com">hello@example.com</a>
+            </p>
+
+            <p>
+                For course information and general enquiries,
+                please contact our learning support team.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Website footer -->
+    <footer>
+        <p>&copy; 2026 LearnTech Academy. All rights reserved.</p>
+        <p><a href="index.html">Back to Home</a></p>
+    </footer>
+
+</body>
+</html>
