@@ -1,185 +1,373 @@
+/* ============================================================
+   Frontend Learning Hub / LearnTech Academy
+   Week 3 CSS Assignment - External Stylesheet
+   ------------------------------------------------------------
+   Contents
+   1. Design tokens (colors, fonts, spacing)
+   2. Base and typography
+   3. Layout and containers
+   4. Header and navigation
+   5. Hero section
+   6. Content cards
+   7. Buttons and links
+   8. Forms
+   9. Tables
+   10. Media
+   11. Footer
+   12. ID-specific styles
+   13. Responsive rules
+   ============================================================ */
 
-/* ------------------------------
-   Global styles
------------------------------- */
+/* ------------------------------------------------------------
+   1. Design tokens
+   ------------------------------------------------------------ */
+:root {
+    --font-body: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --color-primary: #1d4ed8;
+    --color-primary-dark: #1e3a8a;
+    --color-primary-soft: #dbeafe;
+    --color-accent: #0284c7;
+    --color-text: #1e293b;
+    --color-muted: #475569;
+    --color-bg: #f1f5f9;
+    --color-surface: #ffffff;
+    --color-border: #cbd5e1;
+    --color-header: #0f172a;
+    --color-header-text: #f8fafc;
+    --color-focus: #f59e0b;
+    --radius: 12px;
+    --radius-small: 8px;
+    --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    --content-width: 1100px;
+    --space: 24px;
+}
 
-* {
+/* ------------------------------------------------------------
+   2. Base and typography
+   ------------------------------------------------------------ */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    color: #263238;
-    background-color: #f5f7fa;
-}
-
-.container {
-    width: min(1100px, 90%);
-    margin: 0 auto;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    background-color: var(--color-bg);
 }
 
 h1,
 h2,
+h3,
+h4 {
+    margin-top: 0;
+    margin-bottom: 0.6em;
+    line-height: 1.25;
+    color: var(--color-primary-dark);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+h2 {
+    font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+}
+
 h3 {
-    line-height: 1.3;
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 1.1rem;
+    color: var(--color-muted);
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+p:last-child {
+    margin-bottom: 0;
 }
 
 a {
-    color: #0759a5;
+    color: var(--color-primary);
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
 }
 
-a:hover {
-    color: #003b70;
+a:hover,
+a:focus {
+    color: var(--color-primary-dark);
 }
 
-/* ------------------------------
-   Header and navigation
------------------------------- */
-
-.site-header {
-    background-color: #102a43;
-    color: #ffffff;
-    padding: 20px 0;
+strong {
+    color: var(--color-primary-dark);
 }
 
-.site-header h1 {
-    margin: 0 0 12px;
+ul,
+ol {
+    margin: 0 0 1rem;
+    padding-left: 1.4rem;
 }
 
-.nav-list {
+li {
+    margin-bottom: 0.4rem;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------
+   3. Layout and containers
+   ------------------------------------------------------------ */
+.container {
+    width: min(var(--content-width), 90%);
+    margin-inline: auto;
+}
+
+main {
+    width: min(var(--content-width), 90%);
+    margin-inline: auto;
+    padding: 40px 0;
+}
+
+main > section,
+main > article {
+    margin-bottom: var(--space);
+    padding: var(--space);
+    overflow-x: auto;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+main > section:last-child,
+main > article:last-child {
+    margin-bottom: 0;
+}
+
+/* ------------------------------------------------------------
+   4. Header and navigation
+   ------------------------------------------------------------ */
+header {
+    padding: 28px 0;
+    background-color: var(--color-header);
+    color: var(--color-header-text);
+    border-bottom: 4px solid var(--color-primary);
+}
+
+header > h1,
+header > p,
+header > nav {
+    width: min(var(--content-width), 90%);
+    margin-inline: auto;
+}
+
+header h1 {
+    margin-bottom: 16px;
+    color: var(--color-header-text);
+}
+
+header p {
+    margin-bottom: 16px;
+    color: #cbd5e1;
+}
+
+header nav {
+    padding: 0;
+    background: none;
+    border: 0;
+}
+
+nav ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 22px;
-    list-style: none;
+    gap: 12px;
+    margin: 0;
     padding: 0;
+    list-style: none;
+}
+
+nav li {
     margin: 0;
 }
 
-.nav-list a {
-    color: #ffffff;
+nav a {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    color: inherit;
+    font-weight: 600;
     text-decoration: none;
-    font-weight: bold;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.nav-list a:hover,
-.nav-list a[aria-current="page"] {
-    text-decoration: underline;
+header nav a {
+    color: var(--color-header-text);
 }
 
-/* ------------------------------
-   Main content
------------------------------- */
-
-main {
-    padding-top: 32px;
-    padding-bottom: 32px;
+header nav a:hover,
+header nav a:focus-visible {
+    background-color: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
 }
 
+header nav a[aria-current="page"] {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+/* Standalone navigation used on the semantic HTML page. */
+body > nav {
+    width: min(var(--content-width), 90%);
+    margin: 24px auto 0;
+    padding: 12px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+body > nav a {
+    color: var(--color-primary);
+}
+
+body > nav a:hover,
+body > nav a:focus-visible {
+    background-color: var(--color-primary-soft);
+    color: var(--color-primary-dark);
+}
+
+/* ------------------------------------------------------------
+   5. Hero section
+   ------------------------------------------------------------ */
 .hero {
     display: flex;
     align-items: center;
     gap: 32px;
     padding: 36px;
-    background-color: #e7f1fc;
-    border-radius: 12px;
-    margin-bottom: 24px;
+    background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+    border: 1px solid #bfdbfe;
 }
 
 .hero-content {
-    flex: 1;
+    flex: 1 1 320px;
 }
 
 .hero h2 {
-    font-size: 2rem;
-    color: #102a43;
+    color: var(--color-primary-dark);
 }
 
 .hero img {
     display: block;
     width: 45%;
+    min-width: 240px;
     height: auto;
+    border-radius: var(--radius);
 }
 
-.page-intro {
-    margin-bottom: 24px;
-}
-
-.content-card {
-    background-color: #ffffff;
-    padding: 24px;
-    margin-bottom: 24px;
-    border-radius: 10px;
-    border: 1px solid #e0e6ed;
-}
-
+/* ------------------------------------------------------------
+   6. Content cards
+   ------------------------------------------------------------ */
 .content-card h2,
 .page-intro h2 {
-    color: #102a43;
+    color: var(--color-primary-dark);
 }
 
-.content-card li {
-    margin-bottom: 8px;
+.content-card ul,
+.content-card ol {
+    margin-bottom: 0;
 }
 
-/* ------------------------------
-   Button
------------------------------- */
-
-.button {
+/* ------------------------------------------------------------
+   7. Buttons and links
+   ------------------------------------------------------------ */
+.button,
+button {
     display: inline-block;
-    padding: 11px 18px;
-    border: none;
-    border-radius: 6px;
-    background-color: #0759a5;
+    padding: 12px 20px;
+    border: 2px solid transparent;
+    border-radius: var(--radius-small);
+    background-color: var(--color-primary);
     color: #ffffff;
-    text-decoration: none;
     font: inherit;
-    font-weight: bold;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.button:hover {
-    background-color: #003b70;
+.button:hover,
+.button:focus-visible,
+button:hover,
+button:focus-visible {
+    background-color: var(--color-primary-dark);
     color: #ffffff;
 }
 
-/* ------------------------------
-   Table
------------------------------- */
-
-.table-wrapper {
-    overflow-x: auto;
+.button:active,
+button:active {
+    transform: translateY(1px);
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 16px;
-    text-align: left;
+button[type="reset"] {
+    background-color: #e2e8f0;
+    color: var(--color-text);
 }
 
-caption {
-    padding: 10px;
-    font-weight: bold;
-    text-align: left;
+button[type="reset"]:hover,
+button[type="reset"]:focus-visible {
+    background-color: #cbd5e1;
+    color: var(--color-text);
 }
 
-th,
-td {
-    padding: 12px;
-    border: 1px solid #d5dde5;
+/* ------------------------------------------------------------
+   8. Forms
+   ------------------------------------------------------------ */
+form {
+    margin-top: 8px;
 }
 
-th {
-    background-color: #e7f1fc;
-    color: #102a43;
+.form-container {
+    width: min(560px, 90%);
+    margin: 40px auto;
+    padding: 32px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
-/* ------------------------------
-   Form
------------------------------- */
+.form-container h1 {
+    text-align: center;
+}
+
+.description {
+    margin-bottom: 24px;
+    color: var(--color-muted);
+    text-align: center;
+}
 
 .form-group {
     margin-bottom: 18px;
@@ -188,54 +376,206 @@ th {
 label {
     display: block;
     margin-bottom: 6px;
-    font-weight: bold;
+    color: var(--color-primary-dark);
+    font-weight: 700;
 }
 
 input,
 select,
 textarea {
     width: 100%;
-    padding: 11px;
-    border: 1px solid #aebbc8;
-    border-radius: 6px;
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-small);
+    background-color: #ffffff;
+    color: var(--color-text);
     font: inherit;
-}
-
-textarea {
-    resize: vertical;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-    outline: 2px solid #0759a5;
-    outline-offset: 2px;
+    border-color: var(--color-primary);
+    outline: 3px solid rgba(29, 78, 216, 0.18);
+    outline-offset: 1px;
 }
 
-/* ------------------------------
-   Footer
------------------------------- */
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
 
-.site-footer {
-    padding: 20px 0;
-    background-color: #102a43;
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.button-group button {
+    flex: 1;
+}
+
+/* ------------------------------------------------------------
+   9. Tables
+   ------------------------------------------------------------ */
+.table-wrapper,
+.table-container {
+    width: min(var(--content-width), 90%);
+    margin: 24px auto;
+    padding: 8px;
+    overflow-x: auto;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    font-size: 0.98rem;
+}
+
+caption {
+    padding: 12px;
+    color: var(--color-primary-dark);
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 12px 14px;
+    border: 1px solid var(--color-border);
+    text-align: left;
+}
+
+thead th {
+    background-color: var(--color-primary);
     color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+tbody tr:hover {
+    background-color: #e0f2fe;
+}
+
+tfoot {
+    background-color: #e2e8f0;
+    font-weight: 700;
+}
+
+/* Tables that are placed directly inside the body. */
+body > h1 {
+    width: min(var(--content-width), 90%);
+    margin: 32px auto 0;
+}
+
+body > table {
+    width: min(var(--content-width), 90%);
+    margin: 24px auto;
+    padding: 8px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* ------------------------------------------------------------
+   10. Media
+   ------------------------------------------------------------ */
+img,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    border-radius: var(--radius-small);
+}
+
+audio {
+    width: 100%;
+    max-width: 560px;
+}
+
+/* ------------------------------------------------------------
+   11. Footer
+   ------------------------------------------------------------ */
+footer {
+    margin-top: 40px;
+    padding: 28px 0;
+    background-color: var(--color-header);
+    color: var(--color-header-text);
     text-align: center;
 }
 
-.site-footer p {
-    margin: 5px 0;
+footer > p,
+footer > h2 {
+    width: min(var(--content-width), 90%);
+    margin-inline: auto;
 }
 
-.site-footer a {
+footer h2 {
+    color: var(--color-header-text);
+}
+
+footer p {
+    margin: 6px 0;
+    color: #cbd5e1;
+}
+
+footer a {
+    color: #93c5fd;
+}
+
+footer a:hover,
+footer a:focus {
     color: #ffffff;
 }
 
-/* ------------------------------
-   Responsive layout
------------------------------- */
+/* ------------------------------------------------------------
+   12. ID-specific styles
+   ------------------------------------------------------------ */
+#contact-form p {
+    margin-bottom: 18px;
+}
 
-@media (max-width: 700px) {
+#registration-form {
+    margin-top: 16px;
+}
+
+#courses-table {
+    margin-top: 16px;
+}
+
+#about,
+#elements,
+#seo,
+#accessibility,
+#best-practices {
+    scroll-margin-top: 24px;
+}
+
+/* ------------------------------------------------------------
+   13. Responsive rules
+   ------------------------------------------------------------ */
+@media (max-width: 760px) {
+    main {
+        padding: 28px 0;
+    }
+
+    main > section,
+    main > article {
+        padding: 20px;
+    }
+
     .hero {
         flex-direction: column;
         align-items: flex-start;
@@ -244,13 +584,55 @@ textarea:focus {
 
     .hero img {
         width: 100%;
+        min-width: 0;
     }
 
-    .hero h2 {
-        font-size: 1.6rem;
+    .button-group {
+        flex-direction: column;
     }
 
-    .content-card {
-        padding: 18px;
+    .form-container {
+        margin: 24px auto;
+        padding: 24px;
+    }
+
+    body > table {
+        width: 94%;
+    }
+}
+
+@media (max-width: 520px) {
+    nav ul {
+        gap: 8px;
+    }
+
+    nav a {
+        padding: 8px 12px;
+        font-size: 0.95rem;
+    }
+
+    table {
+        font-size: 0.88rem;
+    }
+
+    th,
+    td {
+        padding: 8px 6px;
+    }
+
+    caption {
+        padding: 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
     }
 }
