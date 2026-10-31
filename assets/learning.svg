@@ -1,0 +1,67 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="480"
+     height="320"
+     viewBox="0 0 480 320"
+     role="img"
+     aria-labelledby="title desc">
+
+    <title id="title">LearnTech Academy</title>
+    <desc id="desc">A computer displaying code beside a learning book.</desc>
+
+    <rect width="480" height="320" rx="20" fill="#dceafa"/>
+
+    <!-- Computer screen -->
+    <rect x="80" y="55" width="320" height="190"
+          rx="12" fill="#102a43"/>
+
+    <rect x="94" y="69" width="292" height="158"
+          rx="5" fill="#ffffff"/>
+
+    <!-- Window controls -->
+    <circle cx="110" cy="84" r="5" fill="#e76f51"/>
+    <circle cx="127" cy="84" r="5" fill="#e9c46a"/>
+    <circle cx="144" cy="84" r="5" fill="#2a9d8f"/>
+
+    <!-- Code lines -->
+    <rect x="118" y="112" width="105" height="9"
+          rx="4" fill="#0759a5"/>
+
+    <rect x="118" y="134" width="190" height="8"
+          rx="4" fill="#aebbc8"/>
+
+    <rect x="135" y="154" width="150" height="8"
+          rx="4" fill="#2a9d8f"/>
+
+    <rect x="135" y="174" width="185" height="8"
+          rx="4" fill="#aebbc8"/>
+
+    <rect x="118" y="194" width="125" height="8"
+          rx="4" fill="#e9c46a"/>
+
+    <!-- Computer stand -->
+    <path d="M220 245 L260 245 L275 270 L205 270 Z"
+          fill="#102a43"/>
+
+    <rect x="185" y="270" width="110" height="9"
+          rx="4" fill="#0759a5"/>
+
+    <!-- Book -->
+    <rect x="325" y="205" width="75" height="55"
+          rx="7" fill="#ffffff"
+          stroke="#0759a5" stroke-width="3"/>
+
+    <path d="M362 205 V260"
+          stroke="#0759a5" stroke-width="3"/>
+
+    <path d="M338 222 H352 M338 233 H352
+             M372 222 H386 M372 233 H386"
+          stroke="#2a9d8f"
+          stroke-width="3"
+          stroke-linecap="round"/>
+
+    <!-- Decorative circles -->
+    <circle cx="65" cy="220" r="15" fill="#e9c46a"/>
+    <circle cx="420" cy="80" r="12" fill="#2a9d8f"/>
+
+</svg>
