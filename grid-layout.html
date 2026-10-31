@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CSS Grid Layout demonstration page">
+    <title>CSS Grid Layout | Frontend Learning Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Grid container for the entire page layout -->
+    <div class="grid-container">
+        
+        <!-- Header Section -->
+        <header class="grid-header">
+            <div class="header-content">
+                <h1>Frontend Learning Hub</h1>
+                <nav aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="grid-layout.html" aria-current="page">Grid Layout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Sidebar Section -->
+        <aside class="grid-sidebar">
+            <h2>Sidebar</h2>
+            <nav aria-label="Sidebar navigation">
+                <ul class="sidebar-nav">
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#concepts">Grid Concepts</a></li>
+                    <li><a href="#examples">Examples</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                </ul>
+            </nav>
+            
+            <section class="sidebar-widget">
+                <h3>Quick Info</h3>
+                <p>CSS Grid is a powerful two-dimensional layout system.</p>
+            </section>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="grid-main">
+            <section id="overview" class="grid-card">
+                <h2>CSS Grid Layout Overview</h2>
+                <p>
+                    CSS Grid Layout is a two-dimensional layout system for the web. 
+                    It lets you lay content out in rows and columns, and has many 
+                    features that make building complex layouts straightforward.
+                </p>
+            </section>
+
+            <section id="concepts" class="grid-card">
+                <h2>Key Grid Concepts</h2>
+                <ul>
+                    <li><strong>Grid Container:</strong> The element with display: grid</li>
+                    <li><strong>Grid Items:</strong> Direct children of the grid container</li>
+                    <li><strong>Grid Lines:</strong> The dividing lines that make up the structure</li>
+                    <li><strong>Grid Tracks:</strong> Rows or columns of the grid</li>
+                    <li><strong>Grid Areas:</strong> Named areas of the grid</li>
+                </ul>
+            </section>
+
+            <section id="examples" class="grid-card">
+                <h2>Grid Template Examples</h2>
+                <p>
+                    Using grid-template-columns, grid-template-rows, and grid-template-areas 
+                    allows for flexible and maintainable layouts that adapt to different screen sizes.
+                </p>
+                <article class="nested-grid">
+                    <div class="nested-item">Item 1</div>
+                    <div class="nested-item">Item 2</div>
+                    <div class="nested-item">Item 3</div>
+                    <div class="nested-item">Item 4</div>
+                </article>
+            </section>
+
+            <section id="resources" class="grid-card">
+                <h2>Learning Resources</h2>
+                <p>
+                    Practice building different grid layouts to master this powerful CSS feature. 
+                    Experiment with different configurations and responsive designs.
+                </p>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="grid-footer">
+            <div class="footer-content">
+                <p>&copy; 2026 Frontend Learning Hub. All rights reserved.</p>
+                <p><a href="contact.html">Get in touch</a></p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

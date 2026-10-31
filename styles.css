@@ -232,25 +232,534 @@ textarea:focus {
 }
 
 /* ------------------------------
+   CSS Grid Layout
+------------------------------ */
+
+/* 
+   Grid Container - Main layout wrapper
+   Uses display: grid with grid-template-areas for page structure
+*/
+.grid-container {
+    display: grid;
+    /* Define rows: header, content area, footer */
+    grid-template-rows: auto 1fr auto;
+    /* Define columns: sidebar and main content */
+    grid-template-columns: 250px 1fr;
+    /* Create grid gaps between rows and columns */
+    grid-gap: 20px;
+    /* Define grid template areas for semantic layout */
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    min-height: 100vh;
+    width: min(1400px, 95%);
+    margin: 0 auto;
+}
+
+/* Assign grid areas to elements */
+.grid-header {
+    grid-area: header;
+    background-color: #102a43;
+    color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 0 0 8px 8px;
+}
+
+.grid-sidebar {
+    grid-area: sidebar;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid #e0e6ed;
+    height: fit-content;
+}
+
+.grid-main {
+    grid-area: main;
+    display: grid;
+    grid-gap: 20px;
+    align-content: start;
+}
+
+.grid-footer {
+    grid-area: footer;
+    background-color: #102a43;
+    color: #ffffff;
+    padding: 20px 30px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Header content layout */
+.header-content h1 {
+    margin: 0 0 16px;
+    color: #ffffff;
+}
+
+.header-content .nav-list {
+    gap: 30px;
+}
+
+/* Sidebar styles */
+.grid-sidebar h2 {
+    margin-top: 0;
+    color: #102a43;
+    font-size: 1.4rem;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+}
+
+.sidebar-nav li {
+    margin-bottom: 10px;
+}
+
+.sidebar-nav a {
+    color: #0759a5;
+    text-decoration: none;
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e6ed;
+}
+
+.sidebar-nav a:hover {
+    color: #003b70;
+    padding-left: 8px;
+    transition: padding-left 0.2s ease;
+}
+
+.sidebar-widget {
+    background-color: #e7f1fc;
+    padding: 16px;
+    border-radius: 6px;
+    margin-top: 24px;
+}
+
+.sidebar-widget h3 {
+    margin-top: 0;
+    color: #102a43;
+    font-size: 1.1rem;
+}
+
+.sidebar-widget p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+/* Grid cards in main content */
+.grid-card {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 8px;
+    border: 1px solid #e0e6ed;
+}
+
+.grid-card h2 {
+    margin-top: 0;
+    color: #102a43;
+}
+
+/* Nested grid example */
+.nested-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+    margin-top: 20px;
+}
+
+.nested-item {
+    background-color: #e7f1fc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 6px;
+    color: #102a43;
+    font-weight: bold;
+}
+
+/* Footer content */
+.footer-content p {
+    margin: 6px 0;
+}
+
+.footer-content a {
+    color: #ffffff;
+}
+
+/* ------------------------------
    Responsive layout
 ------------------------------ */
 
-@media (max-width: 700px) {
+/* 
+   BREAKPOINT 1: Mobile screens (max-width: 480px)
+   Adjustments for small devices like phones
+*/
+@media (max-width: 480px) {
+    /* Grid Layout - Mobile: Stack everything in single column */
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+        grid-gap: 12px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .grid-header {
+        border-radius: 0;
+        padding: 16px 18px;
+    }
+
+    .header-content h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .header-content .nav-list {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .grid-sidebar {
+        padding: 18px;
+        margin: 0 12px;
+    }
+
+    .grid-main {
+        grid-gap: 12px;
+        margin: 0 12px;
+    }
+
+    .grid-card {
+        padding: 18px;
+    }
+
+    .grid-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .nested-grid {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    .grid-footer {
+        border-radius: 0;
+        padding: 16px 18px;
+    }
+
+    /* Original responsive styles for other pages */
+    .container {
+        width: min(1100px, 95%);
+    }
+
+    .site-header {
+        padding: 16px 0;
+    }
+
+    .site-header h1 {
+        font-size: 1.5rem;
+        margin: 0 0 10px;
+        text-align: center;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .nav-list a {
+        display: block;
+        padding: 6px 0;
+    }
+
+    main {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
     .hero {
         flex-direction: column;
         align-items: flex-start;
-        padding: 24px;
+        padding: 18px;
+        gap: 20px;
+    }
+
+    .hero h2 {
+        font-size: 1.4rem;
+        margin-top: 0;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
     }
 
     .hero img {
         width: 100%;
     }
 
+    .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 12px 16px;
+    }
+
+    .content-card {
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+
+    .content-card h2,
+    .page-intro h2 {
+        font-size: 1.3rem;
+        margin-top: 0;
+    }
+
+    .content-card p,
+    .content-card li {
+        font-size: 0.95rem;
+    }
+
+    .table-wrapper {
+        margin: 0 -16px;
+        padding: 0 16px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    .form-group {
+        margin-bottom: 14px;
+    }
+
+    label {
+        font-size: 0.95rem;
+    }
+
+    input,
+    select,
+    textarea {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    .site-footer {
+        padding: 16px 0;
+        font-size: 0.9rem;
+    }
+}
+
+/* 
+   BREAKPOINT 2: Tablet screens (max-width: 768px)
+   Adjustments for tablet devices - Grid layout changes
+*/
+@media (max-width: 768px) {
+    /* Grid Layout - Tablet: Adjust columns, stack sidebar below header */
+    .grid-container {
+        grid-template-columns: 200px 1fr;
+        grid-template-areas:
+            "header header"
+            "sidebar main"
+            "footer footer";
+        grid-gap: 16px;
+    }
+
+    .grid-header {
+        padding: 18px 24px;
+    }
+
+    .header-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .grid-sidebar {
+        padding: 20px;
+    }
+
+    .grid-sidebar h2 {
+        font-size: 1.3rem;
+    }
+
+    .grid-card {
+        padding: 22px;
+    }
+
+    .nested-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Original responsive styles for other pages */
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 24px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero img {
+        width: 100%;
+        max-width: 400px;
+    }
+
     .hero h2 {
         font-size: 1.6rem;
+        margin-top: 0;
     }
 
     .content-card {
         padding: 18px;
+    }
+
+    .site-header .container {
+        text-align: center;
+    }
+
+    .nav-list {
+        justify-content: center;
+    }
+}
+
+/* 
+   BREAKPOINT 3: Desktop screens (min-width: 1024px)
+   Enhancements for larger displays
+*/
+@media (min-width: 1024px) {
+    /* Grid Layout - Desktop: Full layout with defined columns */
+    .grid-container {
+        grid-template-columns: 280px 1fr;
+        grid-gap: 24px;
+    }
+
+    .grid-header {
+        padding: 24px 36px;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-content h1 {
+        margin: 0;
+    }
+
+    .grid-sidebar {
+        padding: 28px;
+    }
+
+    .grid-card {
+        padding: 32px;
+    }
+
+    .grid-card h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Original responsive styles for other pages */
+    .container {
+        width: min(1200px, 90%);
+    }
+
+    .site-header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .site-header h1 {
+        margin: 0;
+    }
+
+    .hero {
+        padding: 48px;
+        gap: 40px;
+    }
+
+    .hero h2 {
+        font-size: 2.4rem;
+    }
+
+    .hero p {
+        font-size: 1.05rem;
+    }
+
+    .hero img {
+        width: 42%;
+    }
+
+    .content-card {
+        padding: 32px;
+    }
+
+    .content-card h2,
+    .page-intro h2 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+/* 
+   BREAKPOINT 4: Large desktop screens (min-width: 1440px)
+   Additional optimizations for very large displays
+*/
+@media (min-width: 1440px) {
+    .grid-container {
+        width: min(1600px, 90%);
+        grid-template-columns: 320px 1fr;
+        grid-gap: 28px;
+    }
+
+    .grid-header,
+    .grid-footer {
+        padding: 28px 48px;
+    }
+
+    .grid-sidebar {
+        padding: 32px;
+    }
+
+    .grid-card {
+        padding: 36px;
+    }
+
+    .container {
+        width: min(1400px, 85%);
+    }
+
+    .hero h2 {
+        font-size: 2.6rem;
+    }
+
+    .hero {
+        padding: 56px;
+    }
+
+    .content-card {
+        padding: 36px;
     }
 }
