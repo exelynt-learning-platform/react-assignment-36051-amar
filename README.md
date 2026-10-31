@@ -1,35 +1,57 @@
-# react-assignment-36051-amar
-Module &amp; Week Assignments - This repository contains module-wise and week-wise assignment submissions.
 
-Git & GitHub Assignment Answers
-1. Clearly explains what version control is
-Version control is a system that helps developers track and manage changes to source code over time. It stores different versions of files, allowing developers to review history, restore previous versions, and collaborate without overwriting each other's work.
+# Week 2 Final Test – Static Website Using HTML
 
-2. Describes why developers use Git
-Git is a distributed version control system used to manage source code efficiently. Developers use Git to track changes, collaborate with team members, create branches for new features, merge code safely, and maintain a complete history of the project.
+## Project Name
+LearnTech Academy
 
-3. Identifies common problems Git solves
-Git solves several common development problems:
-• Prevents code from being overwritten by multiple developers.
-• Keeps a complete history of code changes.
-• Makes it easy to revert to previous versions.
-• Supports collaboration through branching and merging.
-• Helps resolve conflicts when multiple developers edit the same files.
+## Description
+LearnTech Academy is a multi-page static website created using HTML.
+The project demonstrates the HTML concepts covered during Week 2.
 
-4. Explains the difference between Git and GitHub
-Git is a version control tool installed on a computer that tracks code changes locally. GitHub is a cloud-based platform that hosts Git repositories online, making it easier to collaborate, review code, and manage projects with a team.
+## Pages
 
-5. Compares centralized and distributed version control correctly
-Centralized Version Control (CVCS):
-• Uses one central server to store all code.
-• Developers must connect to the server to commit changes.
-• If the server fails, collaboration may stop.
-• Example: SVN.
+1. index.html – Home page
+2. about.html – About page
+3. courses.html – Courses page
+4. contact.html – Contact page
 
-Distributed Version Control (DVCS):
-• Every developer has a complete copy of the repository.
-• Developers can commit changes offline.
-• Faster, more reliable, and easier to collaborate.
-• Example: Git.
+## HTML Concepts Used
 
-Git is a Distributed Version Control System (DVCS).
+- HTML document structure
+- Semantic HTML elements
+- Headings and paragraphs
+- Ordered and unordered lists
+- Images with alt attributes
+- HTML tables
+- HTML forms
+- Labels and input fields
+- Internal navigation links
+- HTML accessibility attributes
+
+## Project Structure
+
+```text
+week-2-final-test/
+├── index.html
+├── about.html
+├── courses.html
+├── contact.html
+├── README.md
+└── assets/
+    └── learning.svg
+```
+
+## How to Run
+
+1. Download or clone the repository.
+2. Open the project folder in VS Code.
+3. Open index.html in a browser.
+4. Use the navigation menu to visit the other pages.
+
+## Technologies Used
+
+- HTML5
+
+## Note
+The contact form is a frontend demonstration.
+A backend is required to process and store form submissions.
