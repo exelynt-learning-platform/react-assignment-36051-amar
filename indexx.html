@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Selectors and Specificity</title>
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Website header -->
+    <header class="site-header">
+        <h1>Student Learning Dashboard</h1>
+        <p class="subtitle">Learn, Practice and Grow Every Day</p>
+    </header>
+
+    <main>
+
+        <!-- Introduction section -->
+        <section class="content-section">
+            <h2>Welcome to Your Learning Dashboard</h2>
+
+            <p>
+                This dashboard helps students organize their learning
+                activities, explore courses and track their progress.
+            </p>
+
+            <p class="highlight">
+                Consistent practice is the key to improving your skills.
+            </p>
+        </section>
+
+        <!-- Skills section -->
+        <section class="content-section">
+            <h2>My Technical Skills</h2>
+
+            <div class="card">
+                <h3>Frontend Technologies</h3>
+
+                <ul class="skill-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Additional Skills</h3>
+
+                <ul>
+                    <li>Git and GitHub</li>
+                    <li>Responsive Design</li>
+                    <li>Problem Solving</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Learning plan section -->
+        <section class="content-section">
+            <h2>My Daily Learning Plan</h2>
+
+            <div class="learning-plan">
+                <p>Follow these steps every day:</p>
+
+                <!-- Ordered list -->
+                <ol>
+                    <li>Understand one new concept.</li>
+                    <li>Practice with code examples.</li>
+                    <li>Build a small feature or project.</li>
+                    <li>Review mistakes and take notes.</li>
+                </ol>
+
+                <!-- Direct child paragraph for child selector demonstration -->
+                <p class="note">
+                    Tip: Practice regularly instead of only reading theory.
+                </p>
+
+                <!-- Nested container -->
+                <div class="extra-info">
+                    <p>
+                        Additional information: Review your previous
+                        lessons every weekend.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CSS specificity demonstration -->
+        <section class="content-section">
+            <h2>Understanding CSS Specificity</h2>
+
+            <div class="specificity-card">
+                <p class="message" id="special-message">
+                    This paragraph demonstrates CSS specificity.
+                </p>
+
+                <p class="message">
+                    This paragraph demonstrates class selector styling.
+                </p>
+            </div>
+        </section>
+
+        <!-- ID selector demonstration -->
+        <section class="content-section">
+            <h2>My Learning Goal</h2>
+
+            <p id="learning-goal">
+                My goal is to become a professional frontend developer
+                with strong HTML, CSS, JavaScript and React knowledge.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Website footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Student Learning Dashboard. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
