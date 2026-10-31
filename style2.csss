@@ -1,0 +1,246 @@
+
+/* =====================================
+   1. GLOBAL STYLES
+===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    /* Web-safe font */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Color name */
+    color: black;
+
+    /* Relative font size */
+    font-size: 1rem;
+
+    /* Text spacing */
+    line-height: 1.6;
+
+    /* HEX background color */
+    background-color: #f4f7fb;
+}
+
+
+/* =====================================
+   2. HEADER SECTION
+===================================== */
+
+.site-header {
+    /* HEX color */
+    background-color: #16324f;
+
+    /* RGB color */
+    color: rgb(255, 255, 255);
+
+    text-align: center;
+
+    /* Fixed padding */
+    padding: 30px 20px;
+
+    /* Responsive spacing */
+    min-height: 25vh;
+}
+
+.site-header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    font-weight: 400;
+
+    /* RGBA color */
+    color: rgba(255, 255, 255, 0.85);
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =====================================
+   3. MAIN CONTENT
+===================================== */
+
+main {
+    /* Percentage-based width */
+    width: 85%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    /* em-based padding */
+    padding: 2em 0;
+}
+
+section {
+    background-color: white;
+
+    /* Fixed spacing */
+    padding: 25px;
+
+    margin-bottom: 24px;
+
+    border-radius: 8px;
+}
+
+
+/* =====================================
+   4. INTRO SECTION
+===================================== */
+
+.intro-section h2 {
+    color: #16324f;
+
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    text-align: center;
+
+    letter-spacing: 0.5px;
+}
+
+.intro-section p {
+    color: #555555;
+
+    font-size: 1rem;
+
+    text-align: justify;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   5. COURSE SECTION
+===================================== */
+
+.courses-section h2 {
+    color: #16324f;
+
+    font-size: 1.8rem;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.course-card {
+    /* RGBA background */
+    background-color: rgba(0, 133, 255, 0.07);
+
+    padding: 20px;
+
+    margin-bottom: 18px;
+
+    border-left: 5px solid #0085ff;
+}
+
+.course-card h3 {
+    /* Color name */
+    color: navy;
+
+    font-size: 1.3rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+}
+
+.course-card p {
+    color: #555555;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================
+   6. GOAL SECTION
+===================================== */
+
+.goal-section {
+    /* RGB background */
+    background-color: rgb(232, 243, 255);
+
+    text-align: center;
+}
+
+.goal-section h2 {
+    color: #16324f;
+
+    font-size: 1.7rem;
+}
+
+.goal-section p {
+    color: #444444;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+.highlight-text {
+    /* Color name */
+    color: darkgreen;
+
+    font-size: 1.1rem;
+
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =====================================
+   7. FOOTER SECTION
+===================================== */
+
+.site-footer {
+    background-color: #16324f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 15px;
+
+    font-size: 0.9rem;
+}
+
+
+/* =====================================
+   8. RESPONSIVE STYLES
+===================================== */
+
+@media (max-width: 600px) {
+
+    main {
+        width: 92%;
+    }
+
+    .site-header h1 {
+        font-size: 1.7rem;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    .intro-section h2,
+    .courses-section h2 {
+        font-size: 1.4rem;
+    }
+
+}
