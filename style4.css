@@ -1,0 +1,298 @@
+
+/* =========================================
+   1. GLOBAL RESET AND BOX SIZING
+========================================= */
+
+/*
+   By default, CSS uses content-box.
+   Setting border-box makes the declared width
+   and height include content, padding, and border.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #263238;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   2. HEADER
+========================================= */
+
+.header {
+    background-color: #16324f;
+    color: white;
+
+    text-align: center;
+
+    /* Padding creates space inside the header. */
+    padding: 30px 20px;
+
+    /* Border adds a visible boundary. */
+    border-bottom: 5px solid #0085ff;
+}
+
+.header h1 {
+    margin: 0 0 8px;
+    font-size: 2rem;
+}
+
+.header p {
+    margin: 0;
+}
+
+
+/* =========================================
+   3. MAIN CONTAINER
+========================================= */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+
+    /* Auto margins center the container. */
+    margin: 30px auto;
+
+    padding: 10px;
+}
+
+
+/* =========================================
+   4. COMMON SECTION STYLES
+========================================= */
+
+section {
+    background-color: white;
+
+    /* Space between the section content and border. */
+    padding: 25px;
+
+    /* Space outside the section. */
+    margin-bottom: 25px;
+
+    /* Different border thickness and style. */
+    border: 1px solid #d9e2ec;
+
+    border-radius: 8px;
+}
+
+section h2 {
+    color: #16324f;
+
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    font-size: 1.5rem;
+}
+
+
+/* =========================================
+   5. WELCOME SECTION
+========================================= */
+
+.welcome-section {
+    border-left: 6px solid #0085ff;
+
+    padding: 25px 30px;
+}
+
+.welcome-section p {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   6. PROGRESS CARDS
+========================================= */
+
+.progress-cards {
+    display: flex;
+
+    gap: 20px;
+
+    /* Allow cards to move to the next row
+       when there is insufficient space. */
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #f4f8fc;
+
+    /*
+       With border-box, the declared width includes
+       padding and border instead of adding them.
+    */
+    width: calc((100% - 40px) / 3);
+
+    min-height: 190px;
+
+    padding: 20px;
+
+    border: 2px solid #d9e8f5;
+
+    border-radius: 8px;
+}
+
+.card h3 {
+    color: #16324f;
+
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-size: 1.1rem;
+}
+
+.card p {
+    margin-top: 5px;
+}
+
+.card .number {
+    font-size: 2rem;
+    font-weight: bold;
+
+    color: #0085ff;
+
+    margin: 5px 0;
+}
+
+
+/* =========================================
+   7. BOX MODEL DEMONSTRATION
+========================================= */
+
+.demo-box {
+    /*
+       Total declared width includes:
+       content + padding + border.
+    */
+    width: 100%;
+
+    min-height: 150px;
+
+    background-color: #eaf4ff;
+
+    /* Space inside the box. */
+    padding: 25px;
+
+    /* Visible border around the content. */
+    border: 4px dashed #0085ff;
+
+    /* Space outside the box. */
+    margin: 20px 0;
+
+    border-radius: 6px;
+}
+
+.demo-box h3 {
+    margin-top: 0;
+
+    color: #16324f;
+}
+
+.demo-box p {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   8. LEARNING GOALS
+========================================= */
+
+.goal-item {
+    background-color: #f8fafc;
+
+    padding: 15px 20px;
+
+    margin-bottom: 15px;
+
+    border-left: 4px solid #16a34a;
+
+    border-bottom: 1px solid #d9e2ec;
+}
+
+.goal-item h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+
+    color: #16324f;
+}
+
+.goal-item p {
+    margin: 0;
+}
+
+/* Remove unnecessary bottom spacing from the last item. */
+.goal-item:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   9. FOOTER
+========================================= */
+
+.footer {
+    background-color: #16324f;
+    color: white;
+
+    text-align: center;
+
+    padding: 18px 15px;
+
+    border-top: 4px solid #0085ff;
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+/* =========================================
+   10. RESPONSIVE LAYOUT
+========================================= */
+
+@media (max-width: 768px) {
+
+    .progress-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .container {
+        width: 95%;
+        padding: 5px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .header h1 {
+        font-size: 1.6rem;
+    }
+
+    section h2 {
+        font-size: 1.25rem;
+    }
+
+    .demo-box {
+        padding: 15px;
+    }
+
+}
