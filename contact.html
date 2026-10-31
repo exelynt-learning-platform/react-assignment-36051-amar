@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Frontend Learning Hub with your questions and feedback.">
+    <title>Contact | Frontend Learning Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Common header and navigation used across all website pages. -->
+    <header class="site-header">
+        <div class="container">
+            <h1>Frontend Learning Hub</h1>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="page-intro">
+            <h2>Contact Us</h2>
+            <p>
+                Have a question about our learning programs?
+                Fill out the form below to share your message.
+            </p>
+        </section>
+
+        <section class="content-card">
+            <h2>Send Us a Message</h2>
+
+            <!-- Labels make form fields easier to understand and access. -->
+            <!-- This is a front-end demonstration; no backend processes submissions. -->
+            <form action="#" method="get">
+
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        autocomplete="tel"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Select Your Interested Course</label>
+                    <select id="course" name="course" required>
+                        <option value="">Choose a course</option>
+                        <option value="html">HTML Fundamentals</option>
+                        <option value="css">CSS Essentials</option>
+                        <option value="javascript">JavaScript Basics</option>
+                        <option value="react">React Fundamentals</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Write your message here..."
+                        required
+                    ></textarea>
+                </div>
+
+                <button class="button" type="submit">Submit Message</button>
+
+            </form>
+        </section>
+
+        <section class="content-card">
+            <h2>Other Ways to Connect</h2>
+            <p>Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+            <p>We welcome your questions and feedback.</p>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Frontend Learning Hub. All rights reserved.</p>
+            <p><a href="index.html">Back to Home</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
