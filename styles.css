@@ -763,3 +763,504 @@ textarea:focus {
         padding: 36px;
     }
 }
+
+/* ------------------------------
+   Advanced Selectors & Pseudo-Classes
+------------------------------ */
+
+/* 
+   ATTRIBUTE SELECTORS
+   Style elements based on their attributes
+*/
+
+/* Select all links with target="_blank" attribute */
+a[target="_blank"] {
+    position: relative;
+    padding-right: 18px;
+}
+
+/* Add external link indicator using pseudo-element */
+a[target="_blank"]::after {
+    content: " ↗";
+    font-size: 0.85em;
+    color: #0759a5;
+}
+
+/* Style links based on href attribute patterns */
+a[href^="mailto:"] {
+    color: #d32f2f;
+}
+
+a[href$=".pdf"] {
+    color: #2e7d32;
+    font-weight: 500;
+}
+
+a[href^="#"] {
+    color: #6a1b9a;
+}
+
+/* Style inputs based on type attribute */
+input[type="email"] {
+    border-left: 3px solid #0759a5;
+}
+
+input[type="tel"] {
+    border-left: 3px solid #2e7d32;
+}
+
+input[type="url"] {
+    border-left: 3px solid #f57c00;
+}
+
+input[type="password"] {
+    border-left: 3px solid #d32f2f;
+}
+
+/* Style readonly inputs */
+input[readonly] {
+    background-color: #f5f7fa;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Style elements with data-status attribute */
+[data-status="active"] {
+    color: #2e7d32;
+    font-weight: bold;
+    padding: 8px 12px;
+    background-color: #e8f5e9;
+    border-left: 4px solid #2e7d32;
+    border-radius: 4px;
+}
+
+[data-status="pending"] {
+    color: #f57c00;
+    font-weight: bold;
+    padding: 8px 12px;
+    background-color: #fff3e0;
+    border-left: 4px solid #f57c00;
+    border-radius: 4px;
+}
+
+[data-status="inactive"] {
+    color: #757575;
+    font-weight: bold;
+    padding: 8px 12px;
+    background-color: #f5f5f5;
+    border-left: 4px solid #757575;
+    border-radius: 4px;
+}
+
+/* 
+   PSEUDO-CLASSES FOR INTERACTIVE STATES
+   Style elements based on their state
+*/
+
+/* Focus state for all focusable elements */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid #0759a5;
+    outline-offset: 2px;
+}
+
+/* Focus state with different color for specific inputs */
+input[type="email"]:focus {
+    outline-color: #0759a5;
+    background-color: #f0f7ff;
+}
+
+input[type="tel"]:focus {
+    outline-color: #2e7d32;
+    background-color: #f1f8e9;
+}
+
+input[type="url"]:focus {
+    outline-color: #f57c00;
+    background-color: #fff8e1;
+}
+
+input[type="password"]:focus {
+    outline-color: #d32f2f;
+    background-color: #ffebee;
+}
+
+/* Active state for clickable elements */
+a:active {
+    color: #000;
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Visited links */
+a:visited {
+    color: #6a1b9a;
+}
+
+a[href^="mailto:"]:visited {
+    color: #c62828;
+}
+
+/* 
+   BUTTON STYLES WITH PSEUDO-CLASSES
+*/
+
+/* Button showcase container */
+.button-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+/* Base button styles */
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-danger,
+.btn-submit {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Primary button */
+.btn-primary {
+    background-color: #0759a5;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #003b70;
+    box-shadow: 0 4px 8px rgba(7, 89, 165, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    background-color: #002a4d;
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 2px 4px rgba(7, 89, 165, 0.3);
+}
+
+/* Secondary button */
+.btn-secondary {
+    background-color: #546e7a;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #37474f;
+    box-shadow: 0 4px 8px rgba(84, 110, 122, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+    background-color: #263238;
+    transform: translateY(0) scale(0.98);
+}
+
+/* Success button */
+.btn-success {
+    background-color: #2e7d32;
+    color: #ffffff;
+}
+
+.btn-success:hover {
+    background-color: #1b5e20;
+    box-shadow: 0 4px 8px rgba(46, 125, 50, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-success:active {
+    background-color: #0d3d10;
+    transform: translateY(0) scale(0.98);
+}
+
+/* Danger button */
+.btn-danger {
+    background-color: #d32f2f;
+    color: #ffffff;
+}
+
+.btn-danger:hover {
+    background-color: #b71c1c;
+    box-shadow: 0 4px 8px rgba(211, 47, 47, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-danger:active {
+    background-color: #7f0000;
+    transform: translateY(0) scale(0.98);
+}
+
+/* Submit button */
+.btn-submit {
+    background-color: #0759a5;
+    color: #ffffff;
+    margin-top: 12px;
+    padding: 14px 32px;
+}
+
+.btn-submit:hover {
+    background-color: #003b70;
+    box-shadow: 0 4px 12px rgba(7, 89, 165, 0.4);
+    transform: translateY(-2px);
+}
+
+/* 
+   LINK SHOWCASE
+*/
+.link-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.link-showcase a {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #f5f7fa;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    max-width: fit-content;
+}
+
+.link-showcase a:hover {
+    background-color: #e7f1fc;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+/* 
+   ENHANCED FORM
+*/
+.enhanced-form {
+    margin-top: 20px;
+}
+
+.enhanced-form .form-group {
+    margin-bottom: 20px;
+}
+
+.enhanced-form label {
+    color: #102a43;
+    font-size: 0.95rem;
+}
+
+.enhanced-form input,
+.enhanced-form select,
+.enhanced-form textarea {
+    transition: all 0.2s ease;
+    border: 2px solid #aebbc8;
+}
+
+.enhanced-form input:hover,
+.enhanced-form select:hover,
+.enhanced-form textarea:hover {
+    border-color: #0759a5;
+}
+
+.enhanced-form input:focus,
+.enhanced-form select:focus,
+.enhanced-form textarea:focus {
+    border-color: #0759a5;
+    box-shadow: 0 0 0 3px rgba(7, 89, 165, 0.1);
+}
+
+/* Checkbox group */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Checkbox checked state */
+.checkbox-group input[type="checkbox"]:checked + label {
+    color: #0759a5;
+    font-weight: 500;
+}
+
+/* 
+   PSEUDO-ELEMENTS
+   ::before and ::after for decorative content
+*/
+
+/* Decorated list with ::before */
+.decorated-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 16px;
+}
+
+.decorated-list li {
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* Add decorative bullet using ::before */
+.decorated-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 10px;
+    color: #0759a5;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Add decorative effect on hover */
+.decorated-list li:hover {
+    color: #0759a5;
+    padding-left: 36px;
+    transition: all 0.2s ease;
+}
+
+.decorated-list li:hover::before {
+    color: #003b70;
+    left: 14px;
+}
+
+/* Styled blockquote with ::before and ::after */
+.styled-quote {
+    position: relative;
+    background-color: #e7f1fc;
+    padding: 24px 32px;
+    margin: 24px 0;
+    border-left: 4px solid #0759a5;
+    border-radius: 6px;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: #102a43;
+}
+
+/* Opening quote using ::before */
+.styled-quote::before {
+    content: "“";
+    position: absolute;
+    top: -10px;
+    left: 8px;
+    font-size: 3rem;
+    color: #0759a5;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+/* Closing quote using ::after */
+.styled-quote::after {
+    content: "”";
+    position: absolute;
+    bottom: -30px;
+    right: 12px;
+    font-size: 3rem;
+    color: #0759a5;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+/* 
+   ATTRIBUTE DEMO SECTION
+*/
+.attribute-demo {
+    margin-top: 16px;
+}
+
+.attribute-demo p,
+.attribute-demo input {
+    margin-bottom: 12px;
+}
+
+/* 
+   RESPONSIVE ADJUSTMENTS FOR ADVANCED SELECTORS PAGE
+*/
+@media (max-width: 768px) {
+    .button-showcase {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-success,
+    .btn-danger,
+    .btn-submit {
+        width: 100%;
+        text-align: center;
+    }
+
+    .link-showcase a {
+        max-width: 100%;
+    }
+
+    .styled-quote {
+        padding: 20px 24px;
+        font-size: 1rem;
+    }
+
+    .styled-quote::before,
+    .styled-quote::after {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .decorated-list li {
+        padding-left: 28px;
+    }
+
+    .decorated-list li::before {
+        left: 8px;
+    }
+
+    .decorated-list li:hover {
+        padding-left: 30px;
+    }
+
+    .decorated-list li:hover::before {
+        left: 10px;
+    }
+
+    .styled-quote {
+        padding: 18px 20px;
+    }
+
+    .styled-quote::before {
+        top: -8px;
+        left: 6px;
+        font-size: 2rem;
+    }
+
+    .styled-quote::after {
+        bottom: -24px;
+        right: 8px;
+        font-size: 2rem;
+    }
+}

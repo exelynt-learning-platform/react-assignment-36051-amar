@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Advanced CSS Selectors and Pseudo-Classes Demo">
+    <title>Advanced Selectors & Pseudo-Classes | Frontend Learning Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <h1>Frontend Learning Hub</h1>
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="advanced-selectors.html" aria-current="page">Advanced Selectors</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="page-intro">
+            <h2>Advanced Selectors & Pseudo-Classes</h2>
+            <p>Explore how attribute selectors, pseudo-classes, and pseudo-elements enhance user interaction and visual design.</p>
+        </section>
+
+        <!-- Links Section -->
+        <section class="content-card">
+            <h2>Interactive Links</h2>
+            <p>Different link states using pseudo-classes:</p>
+            <div class="link-showcase">
+                <a href="https://example.com" target="_blank" class="external-link">External Link (target="_blank")</a>
+                <a href="#section1" class="internal-link">Internal Link</a>
+                <a href="mailto:test@example.com" class="email-link">Email Link</a>
+                <a href="document.pdf" download class="download-link">Download Link (.pdf)</a>
+            </div>
+        </section>
+
+        <!-- Buttons Section -->
+        <section class="content-card">
+            <h2>Interactive Buttons</h2>
+            <p>Buttons with hover, active, and focus states:</p>
+            <div class="button-showcase">
+                <button type="button" class="btn-primary">Primary Button</button>
+                <button type="button" class="btn-secondary">Secondary Button</button>
+                <button type="button" class="btn-success">Success Button</button>
+                <button type="button" class="btn-danger">Danger Button</button>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="content-card">
+            <h2>Enhanced Form Inputs</h2>
+            <p>Form inputs styled with attribute selectors and pseudo-classes:</p>
+            <form class="enhanced-form" novalidate>
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                </div>
+
+                <div class="form-group">
+                    <label for="website">Website URL</label>
+                    <input type="url" id="website" name="website" placeholder="https://example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter a secure password" minlength="8">
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="">Select a country</option>
+                        <option value="us">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="ca">Canada</option>
+                        <option value="in">India</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the terms and conditions</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Subscribe to newsletter</label>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Form</button>
+            </form>
+        </section>
+
+        <!-- Pseudo-elements Section -->
+        <section class="content-card">
+            <h2>Pseudo-elements Demo</h2>
+            <p>Using ::before and ::after for decorative content:</p>
+            <ul class="decorated-list">
+                <li>First item with decorative bullet</li>
+                <li>Second item with decorative bullet</li>
+                <li>Third item with decorative bullet</li>
+            </ul>
+
+            <blockquote class="styled-quote">
+                The only way to learn CSS is by practicing and experimenting with different selectors.
+            </blockquote>
+        </section>
+
+        <!-- Attribute Selectors Section -->
+        <section class="content-card">
+            <h2>Attribute Selectors</h2>
+            <p>Styling elements based on attributes:</p>
+            <div class="attribute-demo">
+                <p data-status="active">This paragraph has data-status="active"</p>
+                <p data-status="pending">This paragraph has data-status="pending"</p>
+                <p data-status="inactive">This paragraph has data-status="inactive"</p>
+                <input type="text" value="Text input" readonly>
+                <input type="text" value="Editable input">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Frontend Learning Hub. All rights reserved.</p>
+            <p><a href="contact.html">Get in touch</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
