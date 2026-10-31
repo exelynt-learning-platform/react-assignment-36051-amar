@@ -1,0 +1,446 @@
+
+/* =====================================
+   1. GLOBAL STYLES
+===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #263238;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =====================================
+   2. HEADER AND NAVIGATION
+===================================== */
+
+.site-header {
+
+    background-color: #16324f;
+    color: white;
+
+    padding: 15px 7%;
+
+    /*
+       Flex container:
+       Arrange logo, navigation and button horizontally.
+    */
+    display: flex;
+
+    /* Main axis: distribute items with space between. */
+    justify-content: space-between;
+
+    /* Cross axis: vertically align all header items. */
+    align-items: center;
+
+    gap: 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/*
+   Navigation is also a flex container.
+   Each link becomes a flex item.
+*/
+.navigation {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+.navigation a {
+    color: white;
+    font-size: 0.95rem;
+}
+
+.navigation a:hover {
+    color: #60a5fa;
+}
+
+.header-button {
+    background-color: #0085ff;
+    color: white;
+
+    padding: 10px 16px;
+
+    border-radius: 6px;
+
+    font-size: 0.9rem;
+}
+
+
+/* =====================================
+   3. HERO SECTION
+===================================== */
+
+.hero-section {
+
+    min-height: 350px;
+
+    background-color: #e5f1ff;
+
+    padding: 60px 7%;
+
+    /*
+       Flexbox centers hero content
+       horizontally and vertically.
+    */
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    color: #16324f;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    color: #555;
+
+    font-size: 1.1rem;
+
+    margin-bottom: 25px;
+}
+
+.primary-button {
+    display: inline-block;
+
+    background-color: #0085ff;
+
+    color: white;
+
+    padding: 12px 24px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================
+   4. COURSES SECTION
+===================================== */
+
+.courses-section {
+    padding: 60px 7%;
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    color: #16324f;
+
+    font-size: 2rem;
+
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: #666;
+}
+
+
+/*
+   Flexbox Card Layout:
+   - Cards are arranged horizontally.
+   - gap creates consistent spacing.
+   - flex-wrap allows cards to move to
+     another row when space is insufficient.
+*/
+
+.course-container {
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+}
+
+
+/* Individual flex item */
+.course-card {
+
+    background-color: white;
+
+    border: 1px solid #e0e7ef;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    /*
+       Each card can grow and shrink.
+       Its preferred starting width is 230px.
+    */
+    flex: 1 1 230px;
+
+    max-width: 320px;
+
+    /*
+       Make cards use equal-height vertical layouts.
+       auto margin pushes the link toward the bottom.
+    */
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.course-icon {
+    font-size: 2rem;
+
+    margin-bottom: 12px;
+}
+
+.course-card h3 {
+    color: #16324f;
+
+    margin: 0 0 10px;
+}
+
+.course-card p {
+    color: #666;
+
+    margin: 0 0 20px;
+}
+
+.course-card a {
+    color: #0085ff;
+
+    font-weight: bold;
+
+    margin-top: auto;
+}
+
+
+/* =====================================
+   5. ABOUT SECTION
+===================================== */
+
+.about-section {
+
+    background-color: #eaf4ff;
+
+    padding: 50px 7%;
+
+    /*
+       Arrange two content blocks horizontally.
+    */
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 40px;
+}
+
+.about-content {
+    flex: 2;
+}
+
+.about-content h2 {
+    color: #16324f;
+    font-size: 1.8rem;
+}
+
+.about-highlight {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 8px;
+
+    flex: 1;
+
+    text-align: center;
+}
+
+.about-highlight h3 {
+    color: #0085ff;
+}
+
+
+/* =====================================
+   6. FOOTER
+===================================== */
+
+.site-footer {
+    background-color: #16324f;
+
+    color: white;
+
+    padding: 35px 7%;
+}
+
+.footer-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+}
+
+.footer-brand h3 {
+    margin-top: 0;
+}
+
+.footer-brand p {
+    color: #cbd5e1;
+}
+
+.footer-links {
+
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: white;
+}
+
+.footer-copyright p {
+    font-size: 0.85rem;
+
+    color: #cbd5e1;
+}
+
+
+/* =====================================
+   7. RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 768px) {
+
+    .site-header {
+
+        /*
+           On smaller screens, stack header items
+           vertically instead of forcing one row.
+        */
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .navigation {
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .about-section {
+
+        /*
+           Stack about content vertically.
+        */
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 20px;
+    }
+
+    .about-highlight {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .courses-section {
+        padding: 40px 5%;
+    }
+
+    .course-container {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .course-card {
+        width: 100%;
+
+        max-width: none;
+    }
+
+    .hero-content h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero-section {
+        padding: 45px 5%;
+    }
+
+}
