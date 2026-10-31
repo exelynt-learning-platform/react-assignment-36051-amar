@@ -1,111 +1,98 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LearnTech Academy helps students learn web development and technology skills.">
-    <title>Home | LearnTech Academy</title>
+    <meta name="description" content="Frontend Learning Hub helps beginners learn HTML, CSS and JavaScript.">
+    <title>Home | Frontend Learning Hub</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-    <!-- Website header -->
-    <header>
-        <h1>LearnTech Academy</h1>
-        <p>Learn Today. Build Tomorrow.</p>
+    <!-- Header contains the website identity and main navigation. -->
+    <header class="site-header">
+        <div class="container">
+            <h1>Frontend Learning Hub</h1>
 
-        <!-- Main navigation -->
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+            <!-- Navigation links connect all pages of the website. -->
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Main page content -->
-    <main>
+    <!-- Main contains the primary content of this page. -->
+    <main class="container">
 
-        <!-- Introduction section -->
-        <section>
-            <h2>Welcome to LearnTech Academy</h2>
-
-            <p>
-                LearnTech Academy is an online learning platform
-                designed to help students develop practical
-                technology skills through structured learning
-                and hands-on projects.
-            </p>
+        <!-- Hero section introduces the website. -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Build Your Future in Web Development</h2>
+                <p>
+                    Welcome to Frontend Learning Hub! Start your journey
+                    into web development with practical lessons and
+                    beginner-friendly learning resources.
+                </p>
+                <a class="button" href="about.html">Explore Our Learning Programs</a>
+            </div>
 
             <img
                 src="assets/learning.svg"
-                alt="Illustration of a student learning web development on a computer"
-                width="400"
-                height="250"
+                alt="Illustration representing web development and online learning"
+                width="480"
+                height="320"
             >
-
-            <p>
-                Explore our learning programs and start your
-                technology journey today.
-            </p>
-
-            <a href="courses.html">Explore Our Courses</a>
         </section>
 
-        <!-- Benefits section -->
-        <section>
-            <h2>Why Choose LearnTech Academy?</h2>
+        <!-- Article represents a self-contained introduction. -->
+        <article class="content-card">
+            <h2>Why Learn Web Development?</h2>
+            <p>
+                Web development allows you to create websites and web
+                applications. HTML provides the structure, CSS controls
+                the presentation, and JavaScript adds interactivity.
+            </p>
+        </article>
 
-            <p>We provide a practical and beginner-friendly learning experience.</p>
+        <section class="content-card">
+            <h2>What You Will Learn</h2>
+            <p>Our learning path covers the following technologies:</p>
 
+            <!-- Unordered list displays topics without a specific order. -->
             <ul>
-                <li>Beginner-friendly learning content.</li>
-                <li>Practical assignments and projects.</li>
-                <li>Structured learning paths.</li>
-                <li>Industry-relevant technology skills.</li>
-                <li>Continuous learning opportunities.</li>
+                <li>HTML – Structure of web pages</li>
+                <li>CSS – Styling and layouts</li>
+                <li>JavaScript – Web page interactivity</li>
+                <li>React – Building user interfaces</li>
             </ul>
         </section>
 
-        <!-- Learning steps section -->
-        <section>
-            <h2>How to Start Learning</h2>
+        <section class="content-card">
+            <h2>How to Get Started</h2>
+            <p>Follow these steps to begin learning:</p>
 
-            <p>Follow these steps to begin your learning journey:</p>
-
+            <!-- Ordered list displays steps in sequence. -->
             <ol>
-                <li>Explore the available courses.</li>
-                <li>Select a course based on your interests.</li>
-                <li>Study the lessons carefully.</li>
-                <li>Complete practical assignments.</li>
-                <li>Build projects using your new skills.</li>
+                <li>Understand HTML fundamentals.</li>
+                <li>Learn CSS and responsive design.</li>
+                <li>Practice JavaScript concepts.</li>
+                <li>Build small projects regularly.</li>
             </ol>
         </section>
 
-        <!-- Featured article -->
-        <article>
-            <h2>Start Building Your Future</h2>
-
-            <p>
-                Learning technology skills can help you explore
-                opportunities in the software and IT industry.
-                Start with the fundamentals and improve through
-                regular practice.
-            </p>
-
-            <a href="about.html">Learn More About Us</a>
-        </article>
-
     </main>
 
-    <!-- Website footer -->
-    <footer>
-        <p>&copy; 2026 LearnTech Academy. All rights reserved.</p>
-        <p><a href="contact.html">Contact Us</a></p>
+    <!-- Footer contains closing information and secondary links. -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Frontend Learning Hub. All rights reserved.</p>
+            <p><a href="contact.html">Get in touch</a></p>
+        </div>
     </footer>
 
 </body>
