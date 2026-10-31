@@ -1,0 +1,81 @@
+
+/* =====================================
+   1. Element Selector
+   Applies styles to all matching HTML elements
+===================================== */
+
+body {
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h2 {
+    color: #0759a5;
+    font-size: 24px;
+    border-bottom: 2px solid #dce6f0;
+    padding-bottom: 8px;
+}
+
+p {
+    font-size: 16px;
+    color: #263238;
+}
+
+
+/* =====================================
+   2. Class Selector
+   Applies styles to elements with a class
+===================================== */
+
+.skills-list {
+    background-color: #e7f1fc;
+    padding: 20px 40px;
+    border-radius: 8px;
+}
+
+.skills-list li {
+    margin-bottom: 10px;
+}
+
+.highlight-section {
+    background-color: #fff4df;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+
+/* =====================================
+   3. ID Selector
+   Applies styles to the element with this ID
+===================================== */
+
+#about-text {
+    color: #34495e;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   4. Header and Footer Styling
+===================================== */
+
+header {
+    background-color: #e7f1fc;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #102a43;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer p {
+    color: #ffffff;
+}
