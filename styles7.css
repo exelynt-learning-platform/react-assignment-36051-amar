@@ -1,0 +1,777 @@
+
+/* =========================================
+   1. GLOBAL RESET AND BASE STYLES
+========================================= */
+
+/* Universal selector */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+/* Element selector */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #263238;
+    background-color: #f4f7fb;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.25;
+    color: #16324f;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =========================================
+   2. REUSABLE CONTAINER
+========================================= */
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   3. HEADER AND NAVIGATION
+========================================= */
+
+.site-header {
+    background-color: #16324f;
+    color: white;
+
+    /* Sticky positioning keeps navigation visible. */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    padding: 15px 0;
+
+    border-bottom: 3px solid #0085ff;
+}
+
+/* Flexbox header layout */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #60b5ff;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.main-nav a {
+    color: white;
+    font-size: 0.95rem;
+    padding: 7px 0;
+
+    /* Smooth color change on hover. */
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+    color: #60b5ff;
+}
+
+
+/* =========================================
+   4. BUTTONS
+========================================= */
+
+.btn {
+    display: inline-block;
+    padding: 11px 22px;
+    border: 0;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #0085ff;
+}
+
+.btn-primary:hover {
+    background-color: #006dcc;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   5. HOME HERO SECTION
+========================================= */
+
+.hero-section {
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: #e8f3ff;
+    padding: 65px 0;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 45px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 550px;
+}
+
+.hero-text h1 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    color: #536273;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 440px;
+    max-height: 340px;
+    object-fit: contain;
+}
+
+/* Absolute positioning relative to hero-section. */
+.hero-badge {
+    position: absolute;
+    right: 4%;
+    top: 15px;
+
+    background-color: #16324f;
+    color: white;
+
+    padding: 7px 14px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+}
+
+
+/* =========================================
+   6. COMMON SECTION STYLES
+========================================= */
+
+.section {
+    padding: 65px 0;
+}
+
+.section-light {
+    background-color: #eaf3fc;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 35px;
+}
+
+.section-heading h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.section-heading p {
+    color: #64748b;
+}
+
+
+/* =========================================
+   7. EYEBROW TEXT
+========================================= */
+
+.eyebrow {
+    display: inline-block;
+    color: #0085ff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   8. FLEXBOX CARD LAYOUT
+========================================= */
+
+.card-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.feature-card {
+    flex: 1 1 250px;
+    max-width: 360px;
+
+    background-color: white;
+
+    padding: 28px;
+
+    border: 1px solid #e0e7ef;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 14px rgba(22, 50, 79, 0.06);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(22, 50, 79, 0.12);
+}
+
+.feature-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+.card-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 45px;
+    height: 45px;
+
+    margin-bottom: 18px;
+
+    border-radius: 8px;
+
+    background-color: #e3f1ff;
+    color: #0085ff;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   9. TWO-COLUMN CONTENT
+========================================= */
+
+.two-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 45px;
+}
+
+.two-column > div {
+    flex: 1;
+}
+
+.two-column h2 {
+    font-size: 1.9rem;
+    margin-bottom: 18px;
+}
+
+.two-column p {
+    color: #536273;
+}
+
+.info-panel {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #0085ff;
+}
+
+.info-panel h3 {
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   10. LEARNING STEPS
+========================================= */
+
+.steps-list {
+    padding-left: 25px;
+    margin-bottom: 0;
+}
+
+.steps-list li {
+    padding: 8px 0;
+    color: #536273;
+}
+
+.steps-list li::marker {
+    color: #0085ff;
+    font-weight: bold;
+}
+
+.text-link {
+    display: inline-block;
+    color: #0074df;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   11. INNER PAGE BANNER
+========================================= */
+
+.page-banner {
+    background-color: #e8f3ff;
+    text-align: center;
+    padding: 55px 0;
+}
+
+.page-banner h1 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 12px;
+}
+
+.page-banner p {
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   12. COURSE PAGE
+========================================= */
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.course-card .text-link {
+    margin-top: auto;
+}
+
+.course-label {
+    display: inline-block;
+    padding: 5px 11px;
+    margin-bottom: 15px;
+
+    background-color: #e3f1ff;
+    color: #006dcc;
+
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   13. COURSE TABLE
+========================================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #e0e7ef;
+}
+
+.course-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.course-table th,
+.course-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e0e7ef;
+}
+
+.course-table th {
+    background-color: #16324f;
+    color: white;
+    font-weight: 600;
+}
+
+.course-table tbody tr:nth-child(even) {
+    background-color: #f4f7fb;
+}
+
+.course-table tbody tr:hover {
+    background-color: #e8f3ff;
+}
+
+.course-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+
+/* =========================================
+   14. CONTACT PAGE
+========================================= */
+
+.contact-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.contact-info {
+    flex: 1;
+    padding: 20px 0;
+}
+
+.contact-info h2,
+.contact-form-wrapper h2 {
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+}
+
+.contact-info > p {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.contact-detail {
+    margin-bottom: 22px;
+}
+
+.contact-detail h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.contact-detail p {
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+.contact-form-wrapper {
+    flex: 1.2;
+    background-color: white;
+    padding: 30px;
+
+    border: 1px solid #e0e7ef;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 14px rgba(22, 50, 79, 0.06);
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    display: block;
+    width: 100%;
+
+    padding: 12px 14px;
+
+    font: inherit;
+    color: #263238;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+
+    background-color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 2px solid #0085ff;
+    outline-offset: 2px;
+    border-color: #0085ff;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* =========================================
+   15. FOOTER
+========================================= */
+
+.site-footer {
+    background-color: #16324f;
+    color: white;
+    padding: 25px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.footer-content > p {
+    margin: 0;
+    color: #dbeafe;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: white;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: #60b5ff;
+}
+
+
+/* =========================================
+   16. BACK TO TOP BUTTON
+========================================= */
+
+.back-to-top {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 90;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    background-color: #0085ff;
+    color: white;
+
+    border-radius: 50%;
+    font-size: 1.3rem;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.back-to-top:hover {
+    background-color: #006dcc;
+}
+
+
+/* =========================================
+   17. ID SELECTOR EXAMPLE
+========================================= */
+
+/* ID selector demonstration. */
+#home {
+    scroll-margin-top: 80px;
+}
+
+
+/* =========================================
+   18. RESPONSIVE DESIGN - TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .header-content {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-content {
+        gap: 25px;
+    }
+
+    .contact-layout {
+        gap: 25px;
+    }
+
+}
+
+
+/* =========================================
+   19. RESPONSIVE DESIGN - MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .site-header {
+        padding: 13px 0;
+    }
+
+    .main-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+    }
+
+    .main-nav a {
+        font-size: 0.88rem;
+    }
+
+    .hero-section {
+        padding: 45px 0;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-image img {
+        max-width: 300px;
+    }
+
+    .hero-badge {
+        top: 10px;
+        right: 4%;
+        font-size: 0.7rem;
+    }
+
+    .section {
+        padding: 45px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 1.65rem;
+    }
+
+    .card-grid {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .feature-card {
+        width: 100%;
+        max-width: none;
+    }
+
+    .two-column {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+    }
+
+    .contact-layout {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form-wrapper {
+        width: 100%;
+    }
+
+    .contact-form-wrapper {
+        padding: 22px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .course-table th,
+    .course-table td {
+        padding: 12px;
+        white-space: nowrap;
+    }
+
+}
